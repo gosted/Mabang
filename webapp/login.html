@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>登录</title>
+    <!--css样式-->
+    <link rel="shortcut icon" href="static/image/logo.png" >
+    <link href="static/css/login.css" rel="stylesheet">
+    <link href="static/css/reset.css" rel="stylesheet">
+    <!-- <script src="static/js/public/jquery-3.0.0.min.js"></script> -->
+    <script src="static/angular-1.5.8/angular.min.js"></script>  
+    <script src="static/angular-1.5.8/angular-cookies.min.js"></script>  
+    <script src="static/js/public/base64.min.js"></script> 
+</head>
+<body>
+<div class="Lo-content">
+    <div class="wrapper" ng-app="myApp" ng-controller="login">
+        <img src="static/image/login_new.jpg" width="1000" height="950">
+        <div class="wrapper-info">
+            <img src="static/image/logo.png" width="100" height="100">
+            <p>通用架构模版平台名称</p>
+            <div class="logoBox">
+                <div class="default_msg ng-hide" ng-show="noLogin">{{msg}}</div>
+                <div class="form_msg bor_btm">
+                    <div>
+                        <label for="username">用户名</label>
+                        <input type="text" id="username" placeholder="请输入用户名" autocomplete="off" ng-model="username" set-Focus ng-change="checkname()"/>
+                        <span class="ng-hide" ng-show="isShowName" ng-click="clear('name')"></span>
+                    </div>
+                </div>
+                <div class="form_msg">
+                    <label for="password">密&nbsp;&nbsp;&nbsp;码</label>
+                    <input type="password" id="password" placeholder="请输入密码" autocomplete="off" ng-model="password" ng-change="checkpass()"/>
+                    <span class="ng-hide" ng-show="isShowPass" ng-click="clear('pass')"></span>
+                </div>
+                <div class="login">
+                    <button class="login_btn {{bgcolor}}" ng-click="getLogin()">登&nbsp;录</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--js-->
+<script src="static/js/login/index.js"></script>
+</body>
+</html>
