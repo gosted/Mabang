@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ngCookies']);
+var app = angular.module('app', ['ngCookies']);
 app.directive('setFocus', function(){
     return function(scope, element){
         element[0].focus();

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<display-name>gcf-web</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<max-upload-size>10*1024*1024</max-upload-size>
+	<servlet-mapping>
+		<servlet-class>cn.tiankuan.gcf.servlet.ConfigServlet</servlet-class>
+		<url-pattern>/cfg</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-class>cn.tiankuan.gcf.servlet.LoginServlet</servlet-class>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	<filter-mapping>
+		<filter-name>pageReviewFilter</filter-name>
+		<filter-class>cn.tiankuan.gcf.filter.PageReviewFilter</filter-class>
+		<init-param>
+			<param-name>access.page.index</param-name>
+			<param-value>/index.html</param-value>
+		</init-param>
+		<init-param>
+			<param-name>access.page.aaa</param-name>
+			<param-value>/aaa.html</param-value>
+		</init-param>
+		<!-- <init-param> -->
+		<!-- <param-name>access.page.error</param-name> -->
+		<!-- <param-value>/error.html</param-value> -->
+		<!-- </init-param> -->
+		<!-- <init-param> -->
+		<!-- <param-name>access.folder.static</param-name> -->
+		<!-- <param-value>/static/</param-value> -->
+		<!-- </init-param> -->
+		<!-- <init-param> -->
+		<!-- <param-name>access.servlet.login</param-name> -->
+		<!-- <param-value>/login</param-value> -->
+		<!-- </init-param> -->
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+</web-app>
