@@ -206,14 +206,14 @@ app.controller('tableCtrl', function($scope, $cookies, $http, $timeout) {
         // console.log(data);
         var code = data.statusCode;
         if (code != 200){
-            window.location.href = 'error.html';
+            //window.location.href = 'error.html';
         } else {
             $scope.getList = angular.fromJson(data.result).root;
             // console.log($scope.getList);         
         }
         //...
     }).error(function(data, status, headers, config ) {
-        window.location.href = 'error.html';
+        //window.location.href = 'error.html';
     });         
   }(); 
   // 监听部门下拉框
@@ -288,7 +288,7 @@ app.controller('tableCtrl', function($scope, $cookies, $http, $timeout) {
               }
               //...
           }).error(function(data, status, headers, config ) {
-              window.location.href = 'error.html';
+              //window.location.href = 'error.html';
           });
       }
   }
@@ -426,7 +426,7 @@ app.controller('tableCtrl', function($scope, $cookies, $http, $timeout) {
                 }
                 //...
             }).error(function(data, status, headers, config ) {
-                window.location.href = 'error.html';
+                //window.location.href = 'error.html';
             });
           }
         });
@@ -511,7 +511,7 @@ app.controller('tableCtrl', function($scope, $cookies, $http, $timeout) {
           }
           //...
       }).error(function(data, status, headers, config ) {
-          window.location.href = 'error.html';
+          //window.location.href = 'error.html';
       });
     }
   };
@@ -559,7 +559,7 @@ app.controller('tableCtrl', function($scope, $cookies, $http, $timeout) {
         $('#loginName').css({'border':'1px solid #3c763d'});
       }
     }).error(function(data, status, headers, config ) {
-        window.location.href = 'error.html';
+        //window.location.href = 'error.html';
     }); 
   }
   // 用户列表导入
@@ -637,7 +637,7 @@ app.controller('tableCtrl', function($scope, $cookies, $http, $timeout) {
               }
               //...
           }).error(function(data, status, headers, config ) {
-              window.location.href = 'error.html';
+              //window.location.href = 'error.html';
           });
       }
     );
