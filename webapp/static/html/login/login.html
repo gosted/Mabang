@@ -19,7 +19,7 @@
 </head>
 <body ng-app = "app" ng-init="logo = '../../image/login/logoapp.png'">
 	<div class="login-wrap" ng-controller="loginCtrl"> 
-		<!-- 头部 --> {{ 'title' | translate }}
+		<!-- 头部 --> 
 		<div class="login-header">
 			<div class="main">
 			<div class="main-child">
@@ -51,13 +51,13 @@
 							<li>
 								<div class="li-middle">
 									<img src="../../image/login/iconuser.png">
-									<input type="text" name="username" placeholder="admin"></input>
+									<input autocomplete="off" type="text" name="username" placeholder="admin" ng-model="userName"></input>
 								</div>
 							</li>
 							<li id="login-user">
 								<div class="li-middle">
 									<img src="../../image/login/iconpassword.png">
-									<input type="password" name="password" placeholder="password"></input>
+									<input autocomplete="off" type="password" name="password" placeholder="password" ng-model="password"></input>
 								</div>
 							</li>
 						</ul>
@@ -75,7 +75,7 @@
 						<!-- <input id="rember-check" type="checkbox"></input> -->
 					</div>
 					<!-- 登录按钮 -->
-					<div ng-click="test()" class="login-btn">
+					<div ng-click="login()" class="login-btn">
 						<div class="btn-parent">
 							<a href="javascript:void(0);">
 								Sign in

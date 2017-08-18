@@ -1,13 +1,16 @@
 (function(){
-app.controller("loginCtrl",["$scope","$cookieStore","langData",function($scope,$cookieStore,$langData){
+app.controller("loginCtrl",["$scope","$cookieStore","getData",function($scope,$cookieStore,$getData){
 	$scope.userName = "",
 	$scope.password = "",
 	$scope.rember = false;
-	$langData.data().then(function(data){
-		console.log(data)
-	})
+	
 	$scope.remberPass = function(){
 		$scope.rember = !$scope.rember;
+	}
+	$scope.login = function(){
+		$getData.getData(""+baseUrl+"user.json",{}).then(function(data){
+			console.log(data.data)
+		})
 	}
 }])
 })()

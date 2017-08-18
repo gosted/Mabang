@@ -1,5 +1,6 @@
 var app = angular.module('app', ["ngCookies",'pascalprecht.translate']);
 // 调取接口的方法
+var baseUrl = "http://localhost:3000/erp-web/webapp/static/data/";
 app.factory("getData",function($http,$q){
 	return {
 		getData:function(url,data){
@@ -17,7 +18,7 @@ app.factory("getData",function($http,$q){
 .service('langData', function(getData) {
 	this.data = function(){
 		var promise = new Promise(function(resove,reject){
-			getData.getData("../../data/lang.json",{}).then(function(Data){
+			getData.getData(""+baseUrl+"lang.json",{}).then(function(Data){
 				localStorage.lang == "en" ? Data = Data.data.en : Data = Data.data.zh;
 				resove(Data);
 			},function(data){
@@ -40,7 +41,7 @@ app.factory("getData",function($http,$q){
 .config(function($translateProvider){
 	 var Data = null;
 	 $.ajax({
-	  	url:"../../data/lang.json",
+	  	url:""+baseUrl+"lang.json",
 	  	method:"post",
 	  	async: false,
 	  	dataType:"json",
