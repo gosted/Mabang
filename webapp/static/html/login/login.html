@@ -9,22 +9,30 @@
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 	<title>login</title>
 	<link rel="stylesheet" type="text/css" href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../bootstrap-validator/dist/css/bootstrapValidator.min.css">
 	<link rel="stylesheet" type="text/css" href="../../css/reset.css">
 	<link rel="stylesheet" type="text/css" href="../../css/login.css">
 	<script type="text/javascript" src="../../js/public/jquery-3.0.0.min.js"></script>
 	<script type="text/javascript" src="../../angular-1.5.8/angular.min.js"></script>
 	<script type="text/javascript" src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../bootstrap-validator/dist/js/bootstrapValidator.min.js"></script>
 	<script type="text/javascript" src="../../angular-1.5.8/angular-cookies.min.js"></script>
-	<script type="text/javascript" src="../../angular-1.5.8/angular-translate.min.js"></script>
+
 </head>
+<<<<<<< HEAD
 <body ng-app = "app" ng-init="logo = '../../image/login/logoapp.png'">
 	<div class="login-wrap" ng-controller="loginCtrl"> 
 		<!-- 头部 --> 
+=======
+<body ng-app="app">
+	<div class="login-wrap" ng-controller="loginCtrl">
+		<!-- 头部 -->
+>>>>>>> 45acc56588dc58ec5e69be1587aa4f0c54f0a109
 		<div class="login-header">
 			<div class="main">
 			<div class="main-child">
 				<a id="home-link" href="javascript:void(0)">
-					<img ng-src="{{logo}}">
+					<img src="../../image/login/logoapp.png">
 				</a>
 			</div>
 				<!-- <a id="home-link" href="javascript:void(0)">
@@ -46,26 +54,38 @@
 						<li></li>
 					</ul> -->
 					<div id="blank"></div>
-					<form>
+					<form name="loginForm" novalidate>
 						<ul>
 							<li>
 								<div class="li-middle">
 									<img src="../../image/login/iconuser.png">
+<<<<<<< HEAD
 									<input autocomplete="off" type="text" name="username" placeholder="admin" ng-model="userName"></input>
+=======
+									<input autocomplete="off" class="login-inp" type="text" ng-model='userName' name="username" placeholder="admin"></input>
+									<!-- <span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid"> -->
+									  <span>用户名不存在</span>
+									  </span>
+>>>>>>> 45acc56588dc58ec5e69be1587aa4f0c54f0a109
 								</div>
 							</li>
 							<li id="login-user">
 								<div class="li-middle">
 									<img src="../../image/login/iconpassword.png">
+<<<<<<< HEAD
 									<input autocomplete="off" type="password" name="password" placeholder="password" ng-model="password"></input>
+=======
+									<input class="login-inp" type="password" ng-model="passWord" name="password" placeholder="password"></input>
+									<span class="pass-span">密码错误</span>
+>>>>>>> 45acc56588dc58ec5e69be1587aa4f0c54f0a109
 								</div>
 							</li>
 						</ul>
 					</form>
 					<!-- 记住密码复选框 -->
-					<div class="rember-pass">
-						<div id="rember-check" ng-click="remberPass()">
-							<img ng-show="rember" class="checked"  src="../../image/login/iconcheck.png">
+					<div class="rember-pass" ng-click="isCheck()">
+						<div id="rember-check">
+							<img ng-show='remberPass'  ng-src="../../image/login/iconcheck.png">
 						</div>
 						<p>remember me</p>
 						<!-- <span id="rember-check">
@@ -98,7 +118,7 @@
 					<div id="footer-content">
 						<span>Privacy Policy</span>
 						<a href="javascript:void(0);">Help</a>
-						<span>© 2017 CJDropshipping.com.All Rights Reserved.</span>
+						<span><span class="copyright-logo">©</span>2017 CJDropshipping.com.All Rights Reserved.</span>
 					</div>
 				</div>
 			</div>
@@ -107,7 +127,5 @@
 	</div>
 	<script type="text/javascript" src="../../js/public/commen.js"></script>
 	<script type="text/javascript" src="../../js/login/login.js"></script>
-	
-	
 </body>
 </html>
