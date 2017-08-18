@@ -1,11 +1,11 @@
 (function(){
-var injector = angular.injector(["App"]);
-var app = angular.module("app",["ngCookies"])
-.controller("loginCtrl",["$scope","$cookieStore",function($scope,$cookieStore){
+app.controller("loginCtrl",["$scope","$cookieStore","langData",function($scope,$cookieStore,$langData){
 	$scope.userName = "",
 	$scope.password = "",
 	$scope.rember = false;
-	alert(injector.get("myService").my);
+	$langData.data().then(function(data){
+		console.log(data)
+	})
 	$scope.remberPass = function(){
 		$scope.rember = !$scope.rember;
 	}

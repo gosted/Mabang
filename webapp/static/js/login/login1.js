@@ -1,10 +1,21 @@
-(function() {
-// 创建myModule模块、注册服务
-var myModule = angular.module('App', []);
-myModule.service('myService', function() {
-  this.my = 0;
-  console.log(1)
-});
+// 创建herModule模块、注册服务
+var Module = angular.module('changeLang', []);
+Module.service('langData', function() {	
+  this.data = function(){
+	  var promise = new Promise(function(resolve, reject){
+		    $.ajax({
+		    	url:"../../data/lang.json",
+		    	dataType:"json",
+		    	type:"POST",
+		    	success:function(data){
+		    		resolve(data)
+		    	},
+		    	error:function(data){
+		    		reject(data);
+		    	}
+		    })
+  		});
+  		return promise;
+  	}	
+})
  
-
-})()
