@@ -6,6 +6,7 @@ body,html{
 .login-wrap{
   width: 100%;
   height: 100%;
+  min-height: 700px;
 }
 //元素水平居中
 .xauto{
@@ -95,8 +96,19 @@ body,html{
                 color: #fff;
                 margin-left: -8px;
               }
+              span{
+                position: absolute;
+                left: 62%;
+                top: 30%;
+                color: red;
+              }
+              .pass-span{
+                position: absolute;
+                left: 106%;
+                top: 32%;
+                display: table;
+              }
             }
-
           }
         }
       }
@@ -167,6 +179,10 @@ body,html{
       &:hover{
         background-color: #fde8cd;
       }
+      &:active{
+        background-color: #f79c27;
+        color: #fff;
+      }
     }
   }
   
@@ -211,6 +227,11 @@ body,html{
       padding: 0 16px;
       font-size: @footer-size;
       color: @font-color;
+      .copyright-logo{
+        padding: 0 5px 0 0;
+        font-size: 22px;
+        vertical-align: middle;
+      }
     }
     a{
       padding: 0 16px;
@@ -226,17 +247,17 @@ body,html{
 
 
 
-// .placeholder{
-//   ::-webkit-input-placeholder { /* WebKit browsers */
+// .pleaseholder{
+//       input.login-inp::-webkit-input-placeholder { /* WebKit browsers */
 //   　　color:#999;
 //   　　}
-//   　　:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+//   　　input.login-inp:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 //   　　color:#999;
 //   　　}
-//   　　::-moz-placeholder { /* Mozilla Firefox 19+ */
+//   　　input.login-inp::-moz-placeholder { /* Mozilla Firefox 19+ */
 //   　　color:#999;
 //   　　}
-//   　　:-ms-input-placeholder { /* Internet Explorer 10+ */
+//   　　input.login-inp:-ms-input-placeholder { /* Internet Explorer 10+ */
 //   　　color:#999;
 //   　　}
 // }
