@@ -53,7 +53,3 @@ app.factory("getData",function($http,$q){
       $translateProvider.translations('zh',Data.zh);	
       $translateProvider.preferredLanguage(localStorage.lang || 'zh');	 		   
 })
-
- 
-=======
->>>>>>> 45acc56588dc58ec5e69be1587aa4f0c54f0a109
